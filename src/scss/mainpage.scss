@@ -1,0 +1,113 @@
+.page {
+}
+
+// block-text ====================================================================================================//
+
+.block-text {
+	
+	//@include adaptiveValue("min-height", 120, 70, 1154, 767, 1);
+	@media (max-width: 992px) {
+		text-align: left;
+	}
+
+	&__title {
+		font-size: 67px;
+		font-weight: 600;
+		letter-spacing: 0.67px;
+		color: #fff;
+		padding: 0px 0px 49px 0px;
+		line-height: 130%;
+		@include adaptiveValue("font-size", 67, 50, 1154, 992);
+		@media (max-width: 992px) {
+			@include adaptiveValue("font-size", 50, 28);
+			@include adaptiveValue("padding-bottom", 40, 25);
+		}
+	}
+
+	&__text {
+		font-size: 29px;
+		letter-spacing: 0.29px;
+		line-height: 130%;
+		color: #fff;
+		padding: 0px 0px 50px 0px;
+		@media (max-width: 992px) {
+			@include adaptiveValue("font-size", 35, 18);
+		}
+	}
+}
+
+
+// first ====================================================================================================//
+
+.first {
+	background-color: $orange;
+	@include adaptiveValue("padding-top", 120, 70, 1154, 767, 1);
+
+		&__container {
+			padding: 88px 15px;
+			@include adaptiveValue("padding-top", 88, 40);
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			@media (max-width: 992px) {
+				flex-direction: column;
+				padding-bottom: 40px;
+			}
+		}
+
+		&__content {
+		}
+
+		&__text-block {
+			max-width: 700px;
+		}
+
+		&__buttons {
+			display: flex;
+			@media (max-width: 992px) {
+				justify-content: center;
+			}
+			@media (max-width: 500px) {
+				flex-direction: column;
+			}
+		}
+
+		&__image {
+			padding: 0px 0px 0px 20px;
+			@media (max-width: 992px) {
+				padding: 40px 0px 0px 0px;
+				display: block;
+				margin: 0 auto;
+				img {
+					max-width: 80%;
+				}
+			}
+		}
+}
+.button {
+	color: #fff;
+	border-radius: 7px;
+	border: solid 3px #fff;
+	padding: 25px 30px;
+	transition: all 0.3s ease 0s;
+	&:not(:last-child){
+		margin: 0px 35px 0px 0px;
+	}
+	@media (max-width: 500px) {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		&:not(:last-child){
+			margin: 0px 0px 25px 0px;
+		}
+	}
+	&:hover {
+		background-color: #00bec9;
+	}
+
+		&_1 {
+		}
+
+		&_2 {
+		}
+}
