@@ -19,8 +19,10 @@
 		line-height: 130%;
 		@include adaptiveValue("font-size", 67, 50, 1154, 992);
 		@media (max-width: 992px) {
-			@include adaptiveValue("font-size", 50, 28);
-			@include adaptiveValue("padding-bottom", 40, 25);
+		@include adaptiveValue("font-size", 50, 34);
+		@include adaptiveValue("padding-bottom", 40, 25);
+		}
+		&_m {
 			max-width: 500px;
 		}
 	}
@@ -31,19 +33,26 @@
 		line-height: 130%;
 		color: #fff;
 		padding: 0px 0px 50px 0px;
-		@media (max-width: 992px) {
-			@include adaptiveValue("font-size", 35, 18);
-			max-width: 400px;
-		}
-		@media (max-width: 767px) {
-			max-width: none;
+		@include adaptiveValue("font-size", 35, 18);
+		&_m {
+			@media (max-width: 992px) {
+				max-width: 400px;
+			}
+			@media (max-width: 767px) {
+				max-width: none;
+			}
+
 		}
 	}
 }
 
+
 // description ====================================================================================================//
 
 .description {
+	@media (max-width: 767px) {
+		max-width: 500px;
+	}
 
 	&__title {
 		font-size: 50px;
@@ -60,6 +69,7 @@
 		padding: 0px 0px 50px 0px;
 		line-height: 130%;
 		@include adaptiveValue("font-size", 29, 18);
+		@include adaptiveValue("padding-bottom", 50, 20);
 	}
 
 	&__button {
@@ -220,3 +230,146 @@
 		}
 	}
 }
+
+// title-here ====================================================================================================//
+
+.title-here {
+	background-color: $orange;
+	@include adaptiveValue("padding-top", 100, 40);
+	@include adaptiveValue("padding-bottom", 100, 20);
+
+	&__container {
+	}
+
+	&__text-block {
+		text-align: center;
+		max-width: 700px;
+		margin: 0 auto;
+	}
+
+	&__body {
+		display: flex;
+		margin: 0px -15px;
+		flex-wrap: wrap;
+	}
+
+	&__column {
+	}
+}
+
+.column {
+	flex: 0 1 33.333%;
+	padding: 0px 15px;
+	color: #fff;
+	line-height: 120%;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	@media (max-width: 767px) {
+		flex: 0 1 100%;
+	}
+
+	&__image {
+		@include adaptiveValue("padding-bottom", 50, 15);
+		img {
+			max-width: 100%;
+			@media (max-width: 767px) {
+				width: 80%;
+			}
+		}
+	}
+
+	&__title {
+		flex: 1 1 auto;
+		font-size: 38px;
+		@include adaptiveValue("font-size", 38, 24);
+		font-weight: 600;
+		@include adaptiveValue("padding-bottom", 24, 10);
+	}
+
+	&__text {
+		@include adaptiveValue("font-size", 25, 18);
+		@media (max-width: 767px) {
+			padding: 0px 0px 40px 0px;
+		}
+		@media (max-width: 767px) {
+			max-width: 80%;
+			margin: 0 auto;
+		}
+	}
+}
+
+// as-veterinar ====================================================================================================//
+
+
+.as-veterinar {
+	padding: 140px 0px;
+	@include adaptiveValue("padding-top", 140, 60, 1154, 767, 1);
+	@include adaptiveValue("padding-bottom", 140, 60, 1154, 767, 1);
+
+	&__container {
+		display: flex;
+		flex-direction: row-reverse;
+		align-items: center;
+		@media (max-width: 767px) {
+			flex-direction: column;
+			text-align: center;
+			justify-content: center;
+			align-items: stretch;
+		}
+	}
+
+	&__content {
+		display: flex;
+		justify-content: flex-end;
+	}
+
+	&__description {
+		margin: 0px 0px 0px 75px;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		@media (max-width: 767px) {
+			text-align: right;
+			padding: 0px 0px 50px 0px;
+			margin: 0;
+		}
+	}
+
+	&__video {
+		position: relative;
+		z-index: -1;
+		background: #daac00;
+		&_m {
+			position: relative;
+			&::after {
+				content: '';
+				position: absolute;
+				z-index: -1;
+				bottom: -30px;
+				right: -30px;
+				width: 270px;
+				height: 270px;
+				background-color: $orange;
+				border-radius: 5px;
+			}
+			img {
+				@include adaptiveValue("max-width",500, 300, 1154, 767, 1);
+				@media (max-width: 767px) {
+					min-width: 100%;
+				}
+			}
+		}
+	}
+}
+.description__title_m {
+	@media (max-width: 767px) {
+		
+	}
+}
+
+//.description__text_m {
+//	@media (max-width: 767px) {
+//		text-align: left;
+//	}
+//}
