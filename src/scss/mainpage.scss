@@ -179,7 +179,7 @@
 
 .veterinar {
 	padding: 140px 0px;
-	@include adaptiveValue("padding-top", 140, 60, 1154, 767, 1);
+	@include adaptiveValue("padding-top", 140, 40, 1154, 767, 1);
 	@include adaptiveValue("padding-bottom", 140, 60, 1154, 767, 1);
 
 	&__container {
